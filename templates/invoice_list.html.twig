@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>Invoice List</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Invoice Number</th>
+				<th>Invoice Name</th>
+				<th>Address</th>
+				<th>Phone Number</th>
+				<th>Amount</th>
+				<th>&nbsp;</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in data  %}
+
+				<tr>
+					<td>{{ row.InvoiceNumber }}</td>
+					<td>{{ row.InvoiceName }}</td>
+					<td>{{ row.Address }}</td>
+					<td>{{ row.PhoneNumber }}</td>
+					<td>{{ row.Amount }}</td>
+					<td><a href = "{{ path('app_update_invoice', {id : row.id})}}">Update</a></td>
+					<td><a href = "{{ path('app_delete_invoice', {id : row.id}) }}">Delete</a></td>
+
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %}

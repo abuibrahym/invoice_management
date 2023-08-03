@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{# {% form_theme form 'bootstrap_5_layout.html.twig' %} #}
+ {% block body %}
+    <h1>Create Invoice</h1>
+    {{ form_start(invoice_form) }}
+    {{ form_widget(invoice_form) }}
+    <button type="submit">Submit</button>
+    {{ form_end(invoice_form) }}
+   {% endblock %}

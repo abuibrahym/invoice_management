@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+   {% block body %}
+    <h1>Invoice Management System</h1>
+    <a href = "{{ path('app_create_invoice') }}" type = "button">Create</a><br>
+    <a href="{{ path('app_fetch_invoice') }}"type = "button">Invoice-List</a>
+   {% endblock %}
+
